@@ -93,11 +93,13 @@ knn.fit(X_train, y_train)
 
 pred= knn.predict(X_test)
 
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 print(confusion_matrix(y_test, pred))
 
 print(accuracy_score(y_test, pred))
+
+print(classification_report(y_test, pred))
 
 # select the best number of neighbors
 error_rate=[]
@@ -122,11 +124,11 @@ knn.fit(X_train, y_train)
 
 pred= knn.predict(X_test)
 
-from sklearn.metrics import accuracy_score, confusion_matrix
-
 print(confusion_matrix(y_test, pred))
 
 print(accuracy_score(y_test, pred))
+
+print(classification_report(y_test, pred))
 
 # ROC curve
 y_pred_proba= knn.predict_proba(X_test)[:,1]
