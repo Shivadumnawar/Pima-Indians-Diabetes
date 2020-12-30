@@ -141,6 +141,7 @@ plt.plot(fpr, tpr, label= 'KNN')
 plt.xlabel('fpr')
 plt.ylabel('tpr')
 plt.title('ROC curve')
+plt.legend()
 
 from sklearn.metrics import roc_auc_score
 
